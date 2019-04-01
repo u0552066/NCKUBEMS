@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main.ScheduleFragment"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_btn_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="  儲能資訊"
+                android:drawableLeft="@drawable/icon_info"
+                android:textSize="20dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/shadow" />
+            <LinearLayout
+                android:id="@+id/Layout_en_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="狀態："
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_data_status"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="充電"
+                            android:textAlignment="center"
+                            android:background="@color/limegreen"
+                            android:textColor="@color/White"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.08"
+                            android:text=" "
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/vieww_gray"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="SOC："
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_data_soc"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="60"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.08"
+                            android:text="%"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="實功輸出："
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_data_powerset"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="6.22"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.08"
+                            android:text="kWh"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/vieww_gray"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="頻率："
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_data_frequency"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="60.0"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.08"
+                            android:text="Hz"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="電壓："
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_data_voltage"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="233.1"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.08"
+                            android:text="V"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/vieww_gray"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.37"
+                            android:text="電流："
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:id="@+id/tv_data_current"
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="23.5"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="17sp" />
+                        <TextView
+                            android:layout_width="50sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.08"
+                            android:text="A"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_btn_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="  儲能系統設定"
+                android:drawableLeft="@drawable/icon_settings"
+                android:textSize="20dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/shadow" />
+            <LinearLayout
+                android:id="@+id/Layout_en_set"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_powerset"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="操作模式："
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                    <Spinner
+                        android:id="@+id/sp_ess_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/ESSManuallyAuto" />
+                    <TextView
+                        android:id="@+id/tv_manual_power"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="手動輸出設定值："
+                        android:textSize="20dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="(範圍：-15 kW ~ 15 kW)"
+                        android:textSize="18dp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageButton
+                            android:id="@+id/imgbtn_active_sub"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            app:srcCompat="@drawable/subtraction" />
+
+                        <EditText
+                            android:id="@+id/ed_activepower"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:ems="10"
+                            android:inputType="number|numberSigned|numberDecimal"
+                            android:text="0" />
+                        <ImageButton
+                            android:id="@+id/imgbtn_active_add"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:onClick="activeadd"
+                            app:srcCompat="@drawable/addtion"
+                            tools:ignore="OnClick" />
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btn_saveess"
+                        android:layout_width="220dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:text="儲存"
+                        android:textColor="@color/White"
+                        android:background="@drawable/button_shape"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_btn_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_graph"
+                android:text="  排程結果"
+                android:textSize="20dp" />
+            <LinearLayout
+                android:id="@+id/Layout_en_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TabHost
+                    android:id="@+id/tabs_sch_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/tab_power"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+                                <ListView
+                                    android:id="@+id/powerList"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+                                </ListView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/tab_soc"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/boder"
+                                android:orientation="vertical">
+                                <ListView
+                                    android:id="@+id/socList"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+                                </ListView>
+                            </LinearLayout>
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </TabHost>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

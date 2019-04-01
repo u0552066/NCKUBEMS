@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_showArea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_ev_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="#162834"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imgbtn_ev_set"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            app:srcCompat="@drawable/gear" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_hideArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/shadow"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="狀態："
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/tv_ev_status"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/vieww_gray"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="電壓："
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/tv_ev_voltage"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:text="V"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="電流："
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/tv_ev_current"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:text="Ａ"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/vieww_gray">
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="功率："
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/tv_ev_p"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:text="W"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="充電時間："
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/tv_ev_time"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/vieww_gray"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.37"
+                android:text="總用電："
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/tv_ev_elc"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17sp" />
+            <TextView
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:text="度"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

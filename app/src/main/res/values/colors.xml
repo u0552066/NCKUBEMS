@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimaryBlue">#014d9e</color>
+    <color name="colorAccent">#1267b7</color>
+    <color name="lavenderblush">#FFF0F5</color>
+    <color name="toolbar">#ea3737</color>
+    <color name="Black">#000000</color>
+    <color name="Green">#00ff00</color>
+    <color name="background">#f4f4f4</color>
+    <color name="Red"> #FF0000 </color>
+    <color name="vieww_gray">#d8d6d5</color>
+    <color name="White">#FFFFFF</color>
+    <color name="limegreen">#32CD32</color>
+    <color name="violet">#87CEFA</color>
+    <color name="panel_green">#5cb85c</color>
+</resources>

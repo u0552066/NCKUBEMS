@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorPrimaryDark">
+
+
+    <item
+        android:title="用戶用電資訊"
+        app:showAsAction="never"
+        android:orderInCategory="30"
+        android:id="@+id/EnergyUsed"/>
+    <item
+        android:title="變更密碼"
+        app:showAsAction="never"
+        android:orderInCategory="30"
+        android:id="@+id/changePWD"/>
+    <item
+        android:title="登出"
+        app:showAsAction="never"
+        android:orderInCategory="30"
+        android:id="@+id/ItemLogout"/>
+</menu>

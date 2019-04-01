@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">NCKUBEMS</string>
+    <string name="title_home">首頁</string>
+    <string name="title_schedule">儲能系統</string>
+    <string name="title_charge">充電樁</string>
+    <string name="title_dr">需量競價</string>
+    <string name="title_green_energy">綠能發電</string>
+    <string name="lux">W/㎡</string>
+
+    <string-array name="ESSManuallyAuto">
+        <item>手動模式</item>
+        <item>自動模式</item>
+    </string-array>
+
+    <string-array name="ManuallyAuto">
+        <item>一般充電</item>
+        <item>最佳化充電</item>
+    </string-array>
+    <string-array name="EVcurrent">
+        <item>關閉</item>
+        <item>6A</item>
+        <item>16A</item>
+        <item>32A</item>
+    </string-array>
+    <string-array name="EVcurrent2">
+        <item>6A</item>
+        <item>16A</item>
+        <item>32A</item>
+    </string-array>
+    <string-array name="ChargingSpeed">
+        <item>一般充電(10A)</item>
+        <item>最佳化充電(32A)</item>
+    </string-array>
+
+</resources>

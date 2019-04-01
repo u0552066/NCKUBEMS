@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".Main.DRFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/boder">
+
+                    <LinearLayout
+                        android:id="@+id/layout_event_now"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:text="當前事件"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="#162834"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_count1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_hide_event_now"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical"
+                        android:background="#FFFFFF"
+                        android:visibility="gone">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@drawable/shadow"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="投標日期"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="2019-1-5"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:id="@+id/tv_now_date"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="投標價格 (NTD/kWh)"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:text="8.0"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:id="@+id/tv_now_price"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="投標內容 (kW)"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="20"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:id="@+id/tv_now_content"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="開始時間"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="15:00"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:id="@+id/tv_now_start"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="結束時間"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="16:00"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:background="#dcdcdc"
+                                android:id="@+id/tv_now_end"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="預計抑低量 (kW)"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="20"
+                                android:gravity="center"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:textSize="16sp"
+                                android:id="@+id/tv_now_p"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="預計回饋金額 (NTD)"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="160"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:background="#dcdcdc"
+                                android:id="@+id/tv_now_money"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/boder">
+
+                    <LinearLayout
+                        android:id="@+id/layout_event_future"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:text="未來事件"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="#162834"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_count2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layout_hide_event_future"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical"
+                        android:background="#FFFFFF"
+                        android:visibility="gone">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@drawable/shadow"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="投標日期"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="2019-1-6"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:id="@+id/tv_future_date"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="投標價格 (NTD/kWh)"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:text="8.0"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:id="@+id/tv_future_price"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="投標內容 (kW)"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="20"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:id="@+id/tv_future_content"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="開始時間"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="15:00"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:id="@+id/tv_future_start"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="結束時間"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="16:00"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:background="#dcdcdc"
+                                android:id="@+id/tv_future_end"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="預計抑低量 (kW)"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="20"
+                                android:gravity="center"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:textSize="16sp"
+                                android:id="@+id/tv_future_p"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="預計回饋金額 (NTD)"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:background="#dcdcdc"
+                                android:textColor="@android:color/black"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="25dp"
+                                android:layout_weight="1"
+                                android:text="160"
+                                android:gravity="center"
+                                android:textSize="16sp"
+                                android:textColor="@color/colorPrimaryBlue"
+                                android:background="#dcdcdc"
+                                android:id="@+id/tv_future_money"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/boder">
+
+                    <LinearLayout
+                        android:id="@+id/layout_event_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:text="歷史事件"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:textColor="#162834"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_count3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textSize="30sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layout_hide_event_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:layout_margin="2dp"
+                        android:orientation="vertical"
+                        android:background="#FFFFFF"
+                        android:visibility="gone">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@drawable/shadow"/>
+                        <ListView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/lv_history">
+                        </ListView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
